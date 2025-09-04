@@ -55,3 +55,17 @@ if (!function_exists('formatCurrency')) {
         return $formattedInteger . $decimalPart;
     }
 }
+
+if (!function_exists('asset_url')) {
+    function asset_url($path)
+    {
+        // Se estiver na Hostinger, ajustar o caminho
+        if (request()->getHost() === 'darkred-falcon-583814.hostingersite.com') {
+            // Remover prefixos de pasta que não existem na Hostinger
+            $path = preg_replace('/^(app\/|css\/|js\/|img\/|images\/)/', '', $path);
+            return asset($path);
+        }
+        
+        return asset($path);
+    }
+}

@@ -43,16 +43,16 @@
     @endif
 
     <!-- CSS files -->
-    <link rel="stylesheet" href="{{ asset('app/css/tailwind.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('app/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/sweetalert.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/tabler-icons.min.css') }}">
-    <script src="{{ asset('js/theme.bundle.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('app/js/main.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/alpine.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/sweetalert.min.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset_url('app/css/tailwind.min.css') }}">
+    <link rel="stylesheet" href="{{ asset_url('app/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset_url('css/sweetalert.min.css') }}">
+    <link rel="stylesheet" href="{{ asset_url('css/fontawesome.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset_url('css/tabler-icons.min.css') }}">
+    <script src="{{ asset_url('js/theme.bundle.js') }}"></script>
+    <script type="text/javascript" src="{{ asset_url('app/js/main.js') }}"></script>
+    <script type="text/javascript" src="{{ asset_url('js/alpine.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset_url('js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset_url('js/sweetalert.min.js') }}"></script>
 
     @if (isset($setting) && $setting)
         {{-- Check Google Analytics is "enabled" --}}
@@ -209,8 +209,8 @@
     @endif
 
     <!-- Smooth Scroll -->
-    <script type="text/javascript" src="{{ asset('js/smooth-scroll.polyfills.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('app/js/footer.js') }}"></script>
+    <script type="text/javascript" src="{{ asset_url('js/smooth-scroll.polyfills.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset_url('app/js/footer.js') }}"></script>
 
     {{-- Custom JS --}}
     @yield('custom-js')
